@@ -1,8 +1,12 @@
 <?php
 
+Route::get('/', function () {
+    return view('welcome');
+});
+
 Route::name('product.')
     ->group(function () {
-        Route::get('/', 'ProductController@index')->name('index');
+        Route::get('/product', 'ProductController@index')->name('index');
         Route::get('/product/{id}', 'ProductController@show')->name('show');
     });
 
