@@ -22,3 +22,7 @@ Route::name('cart.')
         Route::get('/cart/checkout', 'CartController@checkout')->name('checkout');
         Route::get('/cart/success', 'CartController@success')->name('success');
     });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
